@@ -1,0 +1,1 @@
+(() => { const boot=()=>{const b=document.querySelector('#clearButton');if(!b)return;b.textContent='Wyczyść cały plan';b.addEventListener('click',e=>{e.preventDefault();e.stopImmediatePropagation();localStorage.setItem('gardenowo-empty-plan-v1','1');localStorage.removeItem('gardenowo-project');location.reload()},{capture:true})};window.addEventListener('load',boot)})();
