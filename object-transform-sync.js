@@ -1,0 +1,1 @@
+(() => {setInterval(()=>{const data=JSON.parse(localStorage.getItem('gardenowo-objects')||'[]');document.querySelectorAll('.garden-object').forEach(el=>{const o=data.find(x=>x.id===el.dataset.id);if(o)el.style.transform=`translate(-50%,-50%) rotate(${o.r||0}deg)`})},600)})();
